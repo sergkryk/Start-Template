@@ -30,10 +30,7 @@
   "private": true,
   "scripts": {
     "build": "gulp build",
-    "editorconfig": "editorconfig-cli",
     "start": "gulp start",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint"
   },
   "version": "16.0.0"
 }
