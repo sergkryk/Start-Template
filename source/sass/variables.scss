@@ -1,12 +1,22 @@
 //Template Colors
-//Можно добавлять цвета из темы
-$main-color-text: #000000;
+$anchor-color: #1d6bb9;
+$white-color: #ffffff;
+$promo-background: #fbfbfb;
+// $secondary-color: #f17d4b;
 
+
+//Template Fonts
+$main-color-text: #20262c;
+$second-color-text: rgba(32, 38, 44, 0.7);
+$title-color: #f4f4f4;
 
 //Template breakpoints
-$mobile-width: 320px;
+$mobile-width: 360px;
 $tablet-width: 768px;
-$desktop-width: 1150px;
+$desktop-width: 1024px;
+$middle-desktop-width: 1440px;
+$big-desktop-width: 1920px;
+
 
 //Template retina media
 $retina-dpi: 144dpi;
@@ -14,7 +24,24 @@ $retina-dppx: 1.5dppx;
 
 
 //Template Fonts for BODY
-$main-fonts: "Open-Sans", "Arial", sans-serif;
-$sec-fonts: "Open-Sans", "Arial", sans-serif;
-$main-font-size: 17px;
-$main-font-weight: 500;
+$main-font: "Oranienbaum", "Arial", sans-serif;
+$second-font: "Raleway", "Arial", sans-serif;
+$main-font-size: 16px;
+$main-font-weight: 400;
+
+// prefix
+$prefix_css_img: "../img/";
+
+// transition
+$animate-function: ease-in-out;
+$duration-fast: 0.3s;
+$duration-long: 0.7s;
+$all-transition: all 0.5s ease-in-out;
+$transition-fast: $duration-fast $animate-function;
+$transition-long: $duration-long $animate-function;
+
+// opacity
+$hover-opacity: 0.7;
+$active-opacity: 0.4;
+$high-hover-opacity: 0.5;
+$high-active-opacity: 0.2;

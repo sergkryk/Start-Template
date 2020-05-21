@@ -1,18 +1,18 @@
 {
-  "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
-  ],
-  "description": "Стартовый шаблон для вёрстки",
+  "name": "start template",
+  "version": "1.1.0",
+  "description": "Start Tempate with gulp",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "del": "^4.1.1",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
+    "gulp-concat": "2.6.1",
     "gulp-csso": "^3.0.1",
-    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^5.0.3",
+    "gulp-order": "^1.2.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-posthtml": "^3.0.4",
@@ -20,17 +20,42 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
-    "gulp-uglify": "^3.0.2",
+    "gulp-uglify": "3.0.2",
     "gulp-webp": "^4.0.1",
-    "posthtml-include": "^1.2.0"
+    "pixel-glass": "^1.0.13",
+    "posthtml-include": "^1.2.0",
+    "pump": "3.0.0",
+    "stylelint": "9.10.x",
+    "stylelint-config-htmlacademy": "0.1.x"
   },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint source/js/",
+    "test": "npm run editorconfig & npm run stylelint & npm run eslint",
+    "build": "gulp build",
+    "start": "gulp start",
+    "webp": "gulp webp",
+    "sprite": "gulp sprite"
+  },
+  "browserslist": [
+    "last 2 versions",
+    ">0.25%",
+    "not ie 11",
+    "not op_mini all"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
   "engines": {
     "node": "8.15"
   },
-  "private": true,
-  "scripts": {
-    "build": "gulp build",
-    "start": "gulp start"
-  },
-  "version": "16.0.0"
+  "dependencies": {
+    "del": "^4.1.1"
+  }
 }

@@ -1,11 +1,90 @@
 @mixin reset-list {
-  list-style: none;
-
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 @mixin reset {
   margin: 0;
   padding: 0;
+}
+
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin wrap-mobile {
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@mixin wrap-tablet {
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@mixin wrap-desktop {
+  max-width: 1439px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@mixin wrap-extra-desktop {
+  max-width: 1919px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+// rubber-property
+@mixin rubber-width($min_view, $max_view, $min_val, $max_val) {
+  & {
+    $rate: ($max_val - $min_val) / ($max_view - $min_view);
+    $val: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_val})";
+    width: #{$val};
+  }
+}
+
+@mixin rubber-left-right-padding($min_view, $max_view, $min_val, $max_val) {
+  & {
+    $rate: ($max_val - $min_val) / ($max_view - $min_view);
+    $val: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_val})";
+    padding-left: #{$val};
+    padding-right: #{$val};
+  }
+}
+
+@mixin rubber-margin-top-media($min_view, $max_view, $min_val, $max_val) {
+  & {
+    @media (min-height: $min_view) and (max-height: $max_view) {
+      $rate: ($max_val - $min_val) / ($max_view - $min_view);
+      $val: "calc((100vh - #{$min_view}) * #{$rate} + #{$min_val})";
+      margin-top: #{$val};
+    }
+
+    @media (max-height: $min_view) {
+      margin-top: $min_val;
+    }
+  }
+}
+
+@mixin visually-hidden {
+  & {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }

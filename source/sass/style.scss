@@ -1,8 +1,7 @@
-@import "normalize.scss";
-@import "fonts.scss";
-@import "variables.scss";
-@import "mixin.scss";
-@import "scaffolding.scss";
-@import "blocks/header.scss";
-//Тут остальные импорта
-@import "blocks/footer.scss";
+@import "normalize";
+@import "variables";
+@import "mixin";
+@import "font";
+@import "scaffolding";
+// @import "blocks/button";
+

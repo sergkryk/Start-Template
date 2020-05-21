@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Start Template</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- <link rel="preload" href="" as="font" crossorigin="anonymous"> Опционально --> 
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tambovskii</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
 <body>
-	<h1>Hello World</h1>
+  <ul>
+    <li>
+      <a href="main.html">Главная</a>
+    </li>
+    <li>
+      <a href="about.html">О заводе</a>
+    </li>
+    <li>
+      <a href="catalog-inner-page.html">Внутренняя страница каталога</a>
+    </li>
+    <li>
+      <a href="all-products.html">Вся продукция</a>
+    </li>
+    <li>
+      <a href="page-content.html">Страница контента</a>
+    </li>
+    <li>
+      <a href="production.html">Производство</a>
+    </li>
+    <li>
+      <a href="cooperation.html">Сотрудничество</a>
+    </li>
+    <li>
+      <a href="where-buy.html">Где купить</a>
+    </li>
+    <li>
+      <a href="recipes.html">Рецепты</a>
+    </li>
+    <li>
+      <a href="soft-cheese.html">Сыр</a>
+    </li>
+  </ul>
+  <div class="popup popup--contact-us">
+    <div class="popup__inner">
+      <div class="popup__overlay popup__overlay--contact-us"></div>
+      <div class="contact-us popup__content">
+        <div class="contact-us__container">
+          <button class="contact-us__close-btn" type="button" aria-label="Закрыть модальное окно">
+            <svg width="50" height="52">
+              <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <div class="contact-us__decor contact-us__decor--left">
+            <div class="contact-us__decor-inner contact-us__decor-inner--left"></div>
+          </div>
+          <div class="contact-us__decor contact-us__decor--right">
+            <div class="contact-us__decor-inner contact-us__decor-inner--right"></div>
+          </div>
+          <h3>Написать нам</h3>
+          <p>
+            У&nbsp;вас есть вопросы, пожелания или вы&nbsp;хотите помочь нам стать лучше? Заполните форму ниже,
+            и&nbsp;мы&nbsp;обязательно
+            свяжемся с&nbsp;вами в&nbsp;ближайшее время
+          </p>
+          <form action="#" name="contacts-form" autocomplete="off" method="post">
+            <div class="contact-us__field contact-us__field--input">
+              <input type="text" id="popup-user-name" name="name" required>
+              <label for="popup-user-name">Имя</label>
+            </div>
+            <div class="contact-us__field contact-us__field--input">
+              <input type="text" id="popup-company" name="company" required>
+              <label for="popup-company">Компания</label>
+            </div>
+            <div class="contact-us__field contact-us__field--input">
+              <input type="tel" id="popup-phone" name="phone" required>
+              <label for="popup-phone">Телефон</label>
+            </div>
+            <div class="contact-us__field contact-us__field--input">
+              <input id="popup-email" type="text" name="email" required>
+              <label for="popup-email">Email</label>
+            </div>
+            <div class="contact-us__field contact-us__field--textarea">
+              <textarea id="popup-message" name="message" required></textarea>
+              <label for="popup-message">Имя</label>
+            </div>
+            <div class="contact-us__checkbox">
+              <input class="visually-hidden" type="checkbox" id="popup-check" name="confidentiality" required>
+              <label for="popup-check"><span>Я выражаю свое согласие с </span></label>
+              <a href="#">Политикой конфиденциальности</a>
+            </div>
+            <button class="contact-us__btn button-blue" type="submit">
+              <span class="contact-us__btn-text button-blue__text">Отправить</span>
+              <span class="button-blue__icon arrow-rounded">
+                <svg class="arrow-rounded__icon" width="8" height="4" aria-label="Стрелка вправо">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow-down"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
